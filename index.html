@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- TAILWIND CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="myDiv" class="fixed text-white text-sm ml-2 mt-3 "><span>Score:</span> <span id="score" class="text-info "> 0</span><span> | Level:</span> <span id="level" class="text-info"> 1</span></div>
+    <div id="popUp" class="fixed inset-0 flex items-center justify-center ">
+        <div class="bg-white max-w-md w-full p-6 rounded-lg text-center">
+            <h1 id="popUpScore" class="text-5xl font-bold mb-2">0</h1> <span>Points Scored</span>
+            <p id="popUpLevel" class="text-sm text-gray-700"></p>
+            <div><button id="startButton" class="btn btn-success font-weight-bold mt-4 btn-block" type="button">START GAME</button></div>   
+        </div>              
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <audio id="levelUp" controls style="display:none" src="sounds/level_up.mp3"></audio>
+    <audio id="projectileLaunch" controls style="display:none" src="sounds/Arrow+Swoosh+2.mp3"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+    <script src="game.js"></script>
+</body>
+</html>
